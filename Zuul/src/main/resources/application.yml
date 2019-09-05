@@ -19,6 +19,10 @@ zuul:
     account-service:
        path: /accounts/**
        serviceId: ACCOUNT-SERVICE
+    customer-service:
+       path: /customers/**
+       serviceId: CUSTOMER-SERVICE
+        
   host:
-    socket-timeout-millis: 30000 
+    socket-timeout-millis: 30000
     

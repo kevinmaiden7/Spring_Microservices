@@ -1,15 +1,14 @@
 spring:
   application:
-    name: account-service
+    name: customer-service
     
 # Creates the database in a file 
   datasource:
-    url: jdbc:h2:file:~/accountbanking;DB_CLOSE_ON_EXIT=FALSE;
+    url: jdbc:h2:file:~/customerbanking;DB_CLOSE_ON_EXIT=FALSE;
   # Generates the database *only* if it's not there yet 
   jpa:
     hibernate:
       ddl-auto: update
-      # ddl-auto: create-drop
       # For educational purposes we will show the SQL in console 
     properties:
       hibernate:
@@ -18,32 +17,22 @@ spring:
     console:
       enabled: true
       settings:
-        web-allow-others: true
+        web-allow-others: true    
 
 server:
-  port: 6060
-
+  port: 6161
+  
 eureka:
   client:
     service-url:
       default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     prefer-ip-address: true
-
-#/info endpoint configuration
-info:
-  app:
-    name: account-service
-    description: Account service app
-    version: 0.0.1-SNAPSHOT
-    email: kevin.m.gallego@gmail.com
-    phone: 0
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    metrics:
-      enabled: true	
+    
+logging:
+    file: customer.log
+    level:
+      root: 
+      project:
+          user:
+            UserClient: FULL
