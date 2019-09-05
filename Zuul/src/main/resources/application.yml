@@ -11,5 +11,14 @@ eureka:
       default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     prefer-ip-address: true
-    
+
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    account-service:
+       path: /accounts/**
+       serviceId: ACCOUNT-SERVICE
+  host:
+    socket-timeout-millis: 30000 
     
