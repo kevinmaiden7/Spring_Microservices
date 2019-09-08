@@ -1,7 +1,0 @@
-package com.udea.microservicios.zuul.filters;
-
-import com.netflix.zuul.ZuulFilter;
-
-public class PostFilter extends ZuulFilter {
-
-}

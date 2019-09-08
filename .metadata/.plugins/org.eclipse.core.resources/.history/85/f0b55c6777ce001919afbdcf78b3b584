@@ -1,5 +1,0 @@
-package com.udea.microservicios.zuul.filters;
-
-public class PreFilter {
-
-}
