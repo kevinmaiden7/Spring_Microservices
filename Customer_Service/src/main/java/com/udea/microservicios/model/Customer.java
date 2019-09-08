@@ -9,17 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
 @Table(name="CUSTOMER")
 @Entity
-
-
 public class Customer implements Serializable {
 
 	/**
@@ -96,5 +87,4 @@ public class Customer implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
 }

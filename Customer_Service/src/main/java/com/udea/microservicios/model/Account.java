@@ -23,6 +23,7 @@ public class Account implements Serializable{
 	String accountType;
 	String branchCode;
 	String bank;
+	
 	public Integer getAccountId() {
 		return accountId;
 	}

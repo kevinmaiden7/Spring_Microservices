@@ -13,8 +13,7 @@ import com.udea.microservicios.model.Customer;
 import com.udea.microservicios.repository.CustomerRepository;
 import com.udea.microservicios.service.AccountService;
 
-
-
+@RestController
 public class CustomerController {
 	
 	@Autowired
@@ -30,6 +29,7 @@ public class CustomerController {
 	
 	@GetMapping(value = "/customer")
 	public Iterable<Customer> all (){
+		System.out.println(customerRepository.findAll());
 		return customerRepository.findAll();
 	}
 	
